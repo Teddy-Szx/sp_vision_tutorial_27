@@ -4,6 +4,7 @@ project(PART3_OPENCV)
 
 # 告诉 CMake 我们需要 OpenCV，找不到会直接报错
 find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 # ex1：Hello OpenCV —— 读取并显示图片
 add_executable(opencv_ex1 ex1/example1.cpp)
